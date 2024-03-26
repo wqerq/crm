@@ -1,0 +1,51 @@
+﻿@model SelectList
+
+<script>
+    function groupChanged(selectElement) {
+        var selectedGroupId = selectElement.value;
+        $.ajax({
+            type: "GET",
+            url: "Home/Group_Data",
+            data: { groupId: selectedGroupId },
+            success: function (data) {
+                $('#ShcoolPlanner').html(data);
+            },
+            error: function () {
+                alert("Ошибка при выполнении запроса");
+            }
+        });
+    }
+</script>
+
+<script>
+    function professorChanged(selectElement) {
+        var selectedProfessorId = selectElement.value;
+        $.ajax({
+            type: "GET",
+            url: "Home/Professor_Data",
+            data: { professorId: selectedProfessorId },
+            success: function (data) {
+                $('#ShcoolPlanner').html(data);
+            },
+            error: function () {
+                alert("Ошибка при выполнении запроса");
+            }
+        });
+    }
+</script>
+
+<div class="form-group">
+    Группы
+    @{
+        @Html.DropDownList("Number", ViewBag.Groups as SelectList,"Выбирите группу" ,new { @class = "form-control", onchange = "groupChanged(this)" })
+    }
+</div>
+
+<div class="form-professor">
+    Преподаватели
+    @{
+        @Html.DropDownList("SurName", ViewBag.Professors as SelectList, "Выбирите профессора", new { @class = "form-control", onchange = "professorChanged(this)" })
+    }
+</div>
+<div id="ShcoolPlanner">
+</div>

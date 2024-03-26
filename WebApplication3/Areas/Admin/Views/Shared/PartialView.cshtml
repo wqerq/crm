@@ -1,0 +1,87 @@
+﻿@model Dictionary<KeyValuePair<DayOfWeek, TimeSpan>, string>
+
+<style>
+    table {
+        font-family: Arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: center;
+        padding: 8px;
+        border: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    pre {
+        white-space: pre-wrap;
+        margin: 0;
+    }
+</style>
+
+<table>
+    <thead>
+        <tr>
+            <th>Время</th>
+            <th>Понедельник</th>
+            <th>Вторник</th>
+            <th>Среда</th>
+            <th>Четверг</th>
+            <th>Пятница</th>
+            <th>Суббота</th>
+        </tr>
+    </thead>
+    <tr>
+        <th>08:20 - 09:50</th>
+        <td><pre>@Model[new KeyValuePair<DayOfWeek, TimeSpan>(DayOfWeek.Monday, new TimeSpan(8, 20, 0))]</pre></td>
+        <td><pre>@Model[new KeyValuePair<DayOfWeek, TimeSpan>(DayOfWeek.Tuesday, new TimeSpan(8, 20, 0))]</pre></td>
+        <td><pre>@Model[new KeyValuePair<DayOfWeek, TimeSpan>(DayOfWeek.Wednesday, new TimeSpan(8, 20, 0))]</pre></td>
+        <td><pre>@Model[new KeyValuePair<DayOfWeek, TimeSpan>(DayOfWeek.Thursday, new TimeSpan(8, 20, 0))]</pre></td>
+        <td><pre>@Model[new KeyValuePair<DayOfWeek, TimeSpan>(DayOfWeek.Friday, new TimeSpan(8, 20, 0))]</pre></td>
+        <td><pre>@Model[new KeyValuePair<DayOfWeek, TimeSpan>(DayOfWeek.Saturday, new TimeSpan(8, 20, 0))]</pre></td>
+    </tr>
+    <tr>
+        <th>10:00 - 11:35</th>
+        <td><pre>@Model[new KeyValuePair<DayOfWeek, TimeSpan>(DayOfWeek.Monday, new TimeSpan(10, 0, 0))]</pre></td>
+        <td><pre>@Model[new KeyValuePair<DayOfWeek, TimeSpan>(DayOfWeek.Tuesday, new TimeSpan(10, 0, 0))]</pre></td>
+        <td><pre>@Model[new KeyValuePair<DayOfWeek, TimeSpan>(DayOfWeek.Wednesday, new TimeSpan(10, 0, 0))]</pre></td>
+        <td><pre>@Model[new KeyValuePair<DayOfWeek, TimeSpan>(DayOfWeek.Thursday, new TimeSpan(10, 0, 0))]</pre></td>
+        <td><pre>@Model[new KeyValuePair<DayOfWeek, TimeSpan>(DayOfWeek.Friday, new TimeSpan(10, 0, 0))]</pre></td>
+        <td><pre>@Model[new KeyValuePair<DayOfWeek, TimeSpan>(DayOfWeek.Saturday, new TimeSpan(10, 0, 0))]</pre></td>
+    </tr>
+    <tr>
+        <th>12:05 - 13:40</th>
+        <td><pre>@Model[new KeyValuePair<DayOfWeek, TimeSpan>(DayOfWeek.Monday, new TimeSpan(12, 5, 0))]</pre></td>
+        <td><pre>@Model[new KeyValuePair<DayOfWeek, TimeSpan>(DayOfWeek.Tuesday, new TimeSpan(12, 5, 0))]</pre></td>
+        <td><pre>@Model[new KeyValuePair<DayOfWeek, TimeSpan>(DayOfWeek.Wednesday, new TimeSpan(12, 5, 0))]</pre></td>
+        <td><pre>@Model[new KeyValuePair<DayOfWeek, TimeSpan>(DayOfWeek.Thursday, new TimeSpan(12, 5, 0))]</pre></td>
+        <td><pre>@Model[new KeyValuePair<DayOfWeek, TimeSpan>(DayOfWeek.Friday, new TimeSpan(12, 5, 0))]</pre></td>
+        <td><pre>@Model[new KeyValuePair<DayOfWeek, TimeSpan>(DayOfWeek.Saturday, new TimeSpan(12, 5, 0))]</pre></td>
+    </tr>
+    <tr>
+        <th>13:50 - 15:25</th>
+        <td><pre>@Model[new KeyValuePair<DayOfWeek, TimeSpan>(DayOfWeek.Monday, new TimeSpan(13, 50, 0))]</pre></td>
+        <td><pre>@Model[new KeyValuePair<DayOfWeek, TimeSpan>(DayOfWeek.Tuesday, new TimeSpan(13, 50, 0))]</pre></td>
+        <td><pre>@Model[new KeyValuePair<DayOfWeek, TimeSpan>(DayOfWeek.Wednesday, new TimeSpan(13, 50, 0))]</pre></td>
+        <td><pre>@Model[new KeyValuePair<DayOfWeek, TimeSpan>(DayOfWeek.Thursday, new TimeSpan(13, 50, 0))]</pre></td>
+        <td><pre>@Model[new KeyValuePair<DayOfWeek, TimeSpan>(DayOfWeek.Friday, new TimeSpan(13, 50, 0))]</pre></td>
+        <td><pre>@Model[new KeyValuePair<DayOfWeek, TimeSpan>(DayOfWeek.Saturday, new TimeSpan(13, 50, 0))]</pre></td>
+    </tr>
+    <tr>
+        <th>15:25 - 17:10</th>
+        <td><pre>@Model[new KeyValuePair<DayOfWeek, TimeSpan>(DayOfWeek.Monday, new TimeSpan(15, 35, 0))]</pre></td>
+        <td><pre>@Model[new KeyValuePair<DayOfWeek, TimeSpan>(DayOfWeek.Tuesday, new TimeSpan(15, 35, 0))]</pre></td>
+        <td><pre>@Model[new KeyValuePair<DayOfWeek, TimeSpan>(DayOfWeek.Wednesday, new TimeSpan(15, 35, 0))]</pre></td>
+        <td><pre>@Model[new KeyValuePair<DayOfWeek, TimeSpan>(DayOfWeek.Thursday, new TimeSpan(15, 35, 0))]</pre></td>
+        <td><pre>@Model[new KeyValuePair<DayOfWeek, TimeSpan>(DayOfWeek.Friday, new TimeSpan(15, 35, 0))]</pre></td>
+        <td><pre>@Model[new KeyValuePair<DayOfWeek, TimeSpan>(DayOfWeek.Saturday, new TimeSpan(15, 35, 0))]</pre></td>
+    </tr>
+</table>
